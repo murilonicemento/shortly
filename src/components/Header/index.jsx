@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   MyHeader,
   NavigationBar,
@@ -8,6 +9,12 @@ import {
 import logo from "../../assets/images/logo.svg";
 
 export function Header() {
+  const [activeSidebar, setActiveSidebar] = useState(false);
+
+  function showSidebar() {
+    setActiveSidebar(!activeSidebar);
+  }
+
   return (
     <>
       <MyHeader>
@@ -21,7 +28,7 @@ export function Header() {
           <button>Login</button>
           <button>Sign Up</button>
         </Authentication>
-        <Bars>
+        <Bars onClick={showSidebar} active={activeSidebar}>
           <div></div>
           <div></div>
           <div></div>

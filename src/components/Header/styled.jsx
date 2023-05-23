@@ -48,16 +48,16 @@ export const Bars = styled.div`
 `;
 
 export const Sidebar = styled.ul`
-  display: flex;
+  display: ${(props) => (props.active ? "flex" : "none")};
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 18px;
   width: 85%;
-  height: 260px;
+  height: 300px;
   background-color: ${colors.title};
   margin: auto;
-  border-radius: 4px;
+  border-radius: 8px;
 
   hr {
     width: 90%;
@@ -68,10 +68,23 @@ export const Sidebar = styled.ul`
 
   li {
     list-style-type: none;
+
     a {
       text-decoration: none;
       color: #fff;
       font-weight: 700;
+      cursor: pointer;
+      transition: color 0.4s ease;
+    }
+
+    &:last-child {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 90%;
+      height: 45px;
+      background-color: ${colors.button};
+      border-radius: 20px;
       cursor: pointer;
     }
   }
