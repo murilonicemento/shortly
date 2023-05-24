@@ -9,7 +9,7 @@ export const MyStatistics = styled.section`
   margin: -70px auto 0 auto;
   padding: 140px 0 70px 0;
   position: relative;
-  z-index: -1;
+  z-index: 0;
   text-align: center;
 
   h2 {
@@ -34,7 +34,6 @@ export const Dashboards = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 80px;
   margin-top: 60px;
 
   span {
@@ -44,6 +43,11 @@ export const Dashboards = styled.div`
     background-color: #fff;
     padding: 25px;
     border-radius: 4px;
+    transition: 0.4s;
+
+    &:hover {
+      transform: scale(1.03);
+    }
 
     div {
       width: 70px;
@@ -54,5 +58,10 @@ export const Dashboards = styled.div`
       margin-top: -55px;
       border-radius: 50%;
     }
+  }
+
+  > div {
+    height: 80px;
+    border: 3px solid ${colors.button};
   }
 `;

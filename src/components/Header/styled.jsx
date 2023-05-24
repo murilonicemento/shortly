@@ -19,8 +19,8 @@ export const Authentication = styled.div`
     display: none;
     width: 80px;
     height: 30px;
-    cursor: pointer;
     font-weight: bold;
+    cursor: pointer;
   }
 
   button:not(:last-child) {

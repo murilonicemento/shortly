@@ -23,6 +23,7 @@ export function Statistics() {
             your content.
           </p>
         </span>
+        <div></div>
         <span>
           <div>
             <img src={detailedRecords} alt="Icon Brand Recognition" />
@@ -33,6 +34,7 @@ export function Statistics() {
             where people engage with your content helps inform better decisions.
           </p>
         </span>
+        <div></div>
         <span>
           <div>
             <img src={fullyCustomizable} alt="Icon Brand Recognition" />

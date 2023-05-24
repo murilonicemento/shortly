@@ -16,6 +16,8 @@ export const MyInput = styled.section`
   background-repeat: no-repeat;
   background-position: right top;
   border-radius: 10px;
+  position: relative;
+  z-index: 1;
 
   input {
     width: 90%;
@@ -32,5 +34,6 @@ export const MyInput = styled.section`
     font-weight: 600;
     color: #fff;
     border-radius: 4px;
+    cursor: pointer;
   }
 `;
