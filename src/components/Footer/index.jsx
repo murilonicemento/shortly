@@ -1,7 +1,10 @@
+import { MyFooter } from "./styled";
+import logo from "../../assets/images/logo.svg";
+
 export function Footer() {
   return (
-    <footer>
-      <img src="" alt="Logo Icon" />
+    <MyFooter>
+      <img src={logo} alt="Logo Icon" />
       <div>
         <span>
           <h3></h3>
@@ -35,6 +38,6 @@ export function Footer() {
         <img src="" alt="" />
         <img src="" alt="" />
       </div>
-    </footer>
+    </MyFooter>
   );
 }

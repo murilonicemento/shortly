@@ -1,8 +1,8 @@
 import { Header } from "../../components/Header";
 import { Input } from "../../components/Input";
 import { Footer } from "../../components/Footer";
-import { Dashboards } from "../../components/Dashboards";
-import { MainSection } from "./styled";
+import { Statistics } from "../../components/Statistics";
+import { MainSection, BoostSection } from "./styled";
 import illustrationWorking from "../../assets/images/illustration-working.svg";
 
 export function Home() {
@@ -22,11 +22,11 @@ export function Home() {
           <button>Get Started</button>
         </MainSection>
         <Input />
-        <Dashboards />
-        <section>
+        <Statistics />
+        <BoostSection>
           <h2>Boost your links today</h2>
           <button>Get Started</button>
-        </section>
+        </BoostSection>
         <Footer />
       </main>
     </>

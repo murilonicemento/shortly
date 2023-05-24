@@ -55,7 +55,7 @@ export const Sidebar = styled.ul`
   gap: 18px;
   width: 85%;
   height: 300px;
-  background-color: ${colors.title};
+  background-color: ${colors.statisticsCircle};
   margin: auto;
   border-radius: 8px;
 

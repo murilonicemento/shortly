@@ -28,13 +28,13 @@ export function Header() {
           <button>Login</button>
           <button>Sign Up</button>
         </Authentication>
-        <Bars onClick={showSidebar} active={activeSidebar}>
+        <Bars onClick={showSidebar}>
           <div></div>
           <div></div>
           <div></div>
         </Bars>
       </MyHeader>
-      <Sidebar>
+      <Sidebar active={activeSidebar}>
         <li>
           <a href="">Features</a>
         </li>
