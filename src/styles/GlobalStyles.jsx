@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import * as colors from "../config/colors";
 
 export const GlobalStyles = createGlobalStyle`
   * {
@@ -9,6 +10,22 @@ export const GlobalStyles = createGlobalStyle`
     border: none;
     font-size: 18px;
     font-family: "Poppins", Arial, sans-serif;
+  }
+
+  body {
+    ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #fff;
+            border-radius: 30px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: ${colors.button};
+            border-radius: 7px;
+        }
   }
 
   input, button {

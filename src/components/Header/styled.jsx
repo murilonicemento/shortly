@@ -11,7 +11,26 @@ export const MyHeader = styled.header`
 `;
 
 export const NavigationBar = styled.ul`
-  display: none;
+  display: flex;
+  gap: 15px;
+  li {
+    list-style-type: none;
+    font-size: 15px;
+    font-weight: 500;
+    color: ${colors.text};
+    cursor: pointer;
+    transition: color 0.4s ease;
+
+    &:hover {
+      color: ${colors.buttonHover};
+      transition: color 0.4s ease;
+    }
+  }
+
+  /* @media (min-width: 800px) {
+    display: flex;
+    
+  } */
 `;
 
 export const Authentication = styled.div`
