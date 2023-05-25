@@ -20,6 +20,27 @@ export const MyFooter = styled.footer`
     margin-top: 50px;
   }
 
+  @media (min-width: 800px) {
+    display: flex;
+    align-items: self-start;
+    justify-content: space-around;
+
+    div:nth-child(2) {
+      flex-direction: row;
+      align-items: self-start;
+    }
+  }
+`;
+
+export const Links = styled.span`
+  text-align: center;
+
+  h3 {
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #fff;
+  }
+
   ul {
     display: flex;
     flex-direction: column;
@@ -39,15 +60,12 @@ export const MyFooter = styled.footer`
       transition: color 0.4s ease;
     }
   }
-`;
 
-export const Links = styled.span`
-  text-align: center;
-
-  h3 {
-    margin-bottom: 10px;
-    font-size: 15px;
-    color: #fff;
+  @media (min-width: 800px) {
+    text-align: left;
+    ul {
+      align-items: start;
+    }
   }
 `;
 

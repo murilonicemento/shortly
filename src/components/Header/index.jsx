@@ -16,9 +16,9 @@ export function Header() {
   }
 
   return (
-    <>
-      <MyHeader>
-        <img src={logo} alt="Logo Icon" />
+    <MyHeader>
+      <img src={logo} alt="Logo Icon" />
+      <header>
         <NavigationBar>
           <li>Features</li>
           <li>Pricing</li>
@@ -33,7 +33,7 @@ export function Header() {
           <div></div>
           <div></div>
         </Bars>
-      </MyHeader>
+      </header>
       <Sidebar active={activeSidebar}>
         <li>
           <a href="">Features</a>
@@ -52,6 +52,6 @@ export function Header() {
           <a href="">Sign Up</a>
         </li>
       </Sidebar>
-    </>
+    </MyHeader>
   );
 }

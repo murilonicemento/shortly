@@ -6,13 +6,24 @@ export const MyHeader = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   padding: 15px;
   margin: auto;
+
+  @media (min-width: 800px) {
+    header {
+      width: 86%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
 `;
 
 export const NavigationBar = styled.ul`
-  display: flex;
+  display: none;
   gap: 15px;
+
   li {
     list-style-type: none;
     font-size: 15px;
@@ -27,19 +38,20 @@ export const NavigationBar = styled.ul`
     }
   }
 
-  /* @media (min-width: 800px) {
+  @media (min-width: 800px) {
     display: flex;
-    
-  } */
+  }
 `;
 
 export const Authentication = styled.div`
+  display: none;
+
   button {
-    display: none;
-    width: 80px;
-    height: 30px;
+    width: 100px;
+    height: 35px;
     font-weight: bold;
     cursor: pointer;
+    font-size: 15px;
   }
 
   button:not(:last-child) {
@@ -50,6 +62,10 @@ export const Authentication = styled.div`
   button:not(:first-child) {
     background-color: ${colors.button};
     border-radius: 20px;
+  }
+
+  @media (min-width: 800px) {
+    display: flex;
   }
 `;
 
@@ -64,6 +80,10 @@ export const Bars = styled.div`
   div {
     border: 2px solid ${colors.text};
   }
+
+  @media (min-width: 800px) {
+    display: none;
+  }
 `;
 
 export const Sidebar = styled.ul`
@@ -75,8 +95,8 @@ export const Sidebar = styled.ul`
   width: 85%;
   height: 300px;
   background-color: ${colors.statisticsCircle};
-  margin: auto;
   border-radius: 8px;
+  margin: 30px auto 0 auto;
 
   hr {
     width: 90%;

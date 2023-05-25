@@ -28,6 +28,17 @@ export const MyStatistics = styled.section`
     font-weight: 500;
     color: ${colors.text};
   }
+
+  @media (min-width: 800px) {
+    > h2,
+    > p {
+      width: 530px;
+    }
+
+    h2 {
+      font-size: 40px;
+    }
+  }
 `;
 
 export const Dashboards = styled.div`
@@ -63,5 +74,36 @@ export const Dashboards = styled.div`
   > div {
     height: 80px;
     border: 3px solid ${colors.button};
+  }
+
+  @media (min-width: 800px) {
+    flex-direction: row;
+    width: 90%;
+
+    span {
+      width: 70%;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+
+      p {
+        text-align: start;
+      }
+    }
+
+    span:nth-child(3) {
+      margin-top: 90px;
+    }
+
+    span:nth-child(5) {
+      margin-top: 190px;
+    }
+
+    > div {
+      width: 70px;
+      height: 8px;
+      background-color: ${colors.button};
+      margin-top: 60px;
+    }
   }
 `;
