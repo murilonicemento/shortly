@@ -84,7 +84,9 @@ export const Cards = styled.div`
   display: flex;
   flex-direction: column;
   gap: 15px;
-  position: relative;
+  position: absolute;
+  right: 0;
+  left: 0;
   z-index: 1;
   width: 90%;
   background-color: #fff;
@@ -107,17 +109,6 @@ export const Cards = styled.div`
       font-weight: 500;
       color: ${colors.button};
     }
-
-    button {
-      width: 100%;
-      height: 50px;
-      background-color: ${colors.button};
-      margin-top: 15px;
-      font-weight: 600;
-      color: #fff;
-      border-radius: 4px;
-      cursor: pointer;
-    }
   }
 
   hr {
@@ -135,13 +126,14 @@ export const Cards = styled.div`
     }
 
     div {
-      width: 30%;
+      width: fit-content;
       display: flex;
       align-items: center;
       gap: 25px;
       margin-right: 20px;
 
       button {
+        width: 120px;
         margin: 0;
       }
     }
@@ -149,6 +141,13 @@ export const Cards = styled.div`
 `;
 
 export const Button = styled.button`
+  width: 100%;
+  height: 50px;
   background-color: ${(props) =>
     props.copied ? colors.statisticsCircle : colors.button};
+  margin-top: 15px;
+  font-weight: 600;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
 `;

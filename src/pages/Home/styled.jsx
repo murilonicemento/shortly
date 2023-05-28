@@ -46,6 +46,11 @@ export const MainSection = styled.section`
 
   @media (min-width: 800px) {
     flex-direction: row-reverse;
+    justify-content: space-between;
+
+    img {
+      width: 60%;
+    }
 
     div {
       align-items: self-start;

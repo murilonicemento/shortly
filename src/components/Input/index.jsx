@@ -14,6 +14,7 @@ export function Input() {
   const [shortURL, setShortURL] = useState([]);
   const [inputEmpty, setInputEmpty] = useState(false);
   const [isCopied, setIsCopied] = useState(false);
+  const [longURLArr, setLongURLArr] = useState([]);
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -25,6 +26,7 @@ export function Input() {
       const response = await axios.get(
         `https://api.shrtco.de/v2/shorten?url=${longURL}/very/long/link.html`
       );
+      setLongURLArr([longURL]);
       setShortURL([response.data.result.full_short_link]);
     } catch (error) {
       console.error(error);
@@ -48,7 +50,7 @@ export function Input() {
       </MyInput>
       {shortURL.map((url, index) => (
         <Cards key={index}>
-          <p>{longURL}</p>
+          <p>{longURLArr[0]}</p>
           <hr />
           <div>
             <a href={url}>{url}</a>

@@ -13,6 +13,7 @@ export const MyStatistics = styled.section`
   text-align: center;
 
   h2 {
+    margin-top: 200px;
     font-size: 30px;
     font-weight: 700;
     color: ${colors.title};
@@ -37,6 +38,7 @@ export const MyStatistics = styled.section`
 
     h2 {
       font-size: 40px;
+      margin-top: 80px;
     }
   }
 `;

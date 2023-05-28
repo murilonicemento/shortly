@@ -11,6 +11,8 @@ export const MyHeader = styled.header`
   margin: auto;
 
   @media (min-width: 800px) {
+    flex-wrap: nowrap;
+
     header {
       width: 86%;
       display: flex;
@@ -23,6 +25,7 @@ export const MyHeader = styled.header`
 export const NavigationBar = styled.ul`
   display: none;
   gap: 15px;
+  padding-left: 20px;
 
   li {
     list-style-type: none;
