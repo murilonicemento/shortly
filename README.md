@@ -64,6 +64,13 @@ git push origin minha-contribuicao
 
 6. Abra um pull request no repositório original.
 
+## Layout Desktop
+
+<img src="./design/desktop-design.jpg">
+
+## Layout Mobile
+
+<img src="./design/mobile-design.jpg">
 ## Licença
 
 Este projeto é licenciado sob a Licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
