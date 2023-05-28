@@ -1,6 +1,6 @@
 # URL Shortening Landing Page
 
-Este é um aplicativo To-Do simples, criado utilizando React e Styled Components. Ele permite que o usuário adicione tarefas, marque como concluídas e exclua tarefas.
+Este é um projeto de encurtamento de URL desenvolvido com React. Ele permite que o usuário insira uma URL longa e obtenha uma URL encurtada como resultado.
 
 ## Pré-requisitos
 
