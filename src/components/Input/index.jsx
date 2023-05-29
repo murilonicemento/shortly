@@ -24,13 +24,22 @@ export function Input() {
     }
     try {
       const response = await axios.get(
-        `https://api.shrtco.de/v2/shorten?url=${longURL}/very/long/link.html`
+        `https://api.shrtco.de/v2/shorten?url=${longURL}`
       );
       setLongURLArr([longURL]);
       setShortURL([response.data.result.full_short_link]);
     } catch (error) {
       console.error(error);
     }
+  }
+
+  function handleCopy(event) {
+    event.preventDefault();
+    const url = shortURL;
+    navigator.clipboard
+      .writeText(url)
+      .then(() => setIsCopied(true))
+      .catch((error) => console.error("Error ao copiar URL", error));
   }
 
   return (
@@ -54,11 +63,7 @@ export function Input() {
           <hr />
           <div>
             <a href={url}>{url}</a>
-            <Button
-              type="button"
-              onClick={() => setIsCopied(true)}
-              copied={isCopied}
-            >
+            <Button type="button" onClick={handleCopy} copied={isCopied}>
               {isCopied ? "Copied!" : "Copy"}
             </Button>
           </div>
