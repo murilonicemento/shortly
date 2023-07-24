@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import * as colors from "../../config/colors";
-import user from "../../assets/images/user.svg";
 import mail from "../../assets/images/mail.svg";
 import password from "../../assets/images/password.svg";
 
@@ -59,13 +58,6 @@ export const Form = styled.form`
     color: ${colors.title};
     border-radius: 4px;
     font-size: 12px;
-  }
-
-  #name {
-    background-image: url(${user});
-    background-repeat: no-repeat;
-    background-position: 5px center;
-    background-size: 18px;
   }
 
   #email {

@@ -27,14 +27,6 @@ export function Login() {
       <Form onSubmit={handleSubmit()}>
         <h1>Login</h1>
         <input
-          {...register("name", { required: true })}
-          type="text"
-          name="name"
-          id="name"
-          placeholder="Stephen King"
-        />
-        {errors.name && <ErrorMessage>Nome é obrigatório!</ErrorMessage>}
-        <input
           {...register("email", { required: true })}
           type="email"
           name="email"
