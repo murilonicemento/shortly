@@ -17,9 +17,15 @@ export function Login() {
 
   return (
     <Container>
+      <div>
+        <h1>Welcome back!</h1>
+        <p>
+          Login and complete your journey to discover the power of our exclusive
+          features.
+        </p>
+      </div>
       <Form onSubmit={handleSubmit()}>
         <h1>Login</h1>
-        <label htmlFor="name">Name</label>
         <input
           {...register("name", { required: true })}
           type="text"
@@ -28,7 +34,6 @@ export function Login() {
           placeholder="Stephen King"
         />
         {errors.name && <ErrorMessage>Nome é obrigatório!</ErrorMessage>}
-        <label htmlFor="email">E-mail</label>
         <input
           {...register("email", { required: true })}
           type="email"
@@ -37,7 +42,6 @@ export function Login() {
           placeholder="name@email.com"
         />
         {errors.email && <ErrorMessage>E-mail é obrigatório!</ErrorMessage>}
-        <label htmlFor="password">Password</label>
         <input
           {...register("password", {
             required: true,

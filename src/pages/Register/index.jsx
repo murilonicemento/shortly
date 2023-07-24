@@ -10,27 +10,33 @@ export function Register() {
   } = useForm();
   return (
     <Container>
-      <Form onSubmit={handleSubmit}>
-        <h1>Register</h1>
-        <label htmlFor="name">Name</label>
+      <div>
+        <h1>New Here?</h1>
+        <p>
+          Sign Up and complete your experience with shorter and easier-to-share
+          links.
+        </p>
+      </div>
+      <Form onSubmit={handleSubmit()}>
+        <h1>Create Account</h1>
         <input
           {...register("name", { required: true })}
           type="text"
           name="name"
           id="name"
           placeholder="Stephen King"
+          autoComplete="off"
         />
-        {errors.name && <ErrorMessage>Nome é obrigatório</ErrorMessage>}
-        <label htmlFor="email">E-mail</label>
+        {errors.name && <ErrorMessage>Name is Required!</ErrorMessage>}
         <input
           {...register("email", { required: true })}
           type="email"
           name="email"
           id="email"
           placeholder="name@email.com"
+          autoComplete="off"
         />
-        {errors.email && <ErrorMessage>E-mail é obrigatório</ErrorMessage>}
-        <label htmlFor="password">Password</label>
+        {errors.email && <ErrorMessage>E-mail is Required!</ErrorMessage>}
         <input
           {...register("password", {
             required: true,
@@ -41,23 +47,24 @@ export function Register() {
           name="password"
           id="password"
           placeholder="Password"
+          autoComplete="off"
         />
         {errors.password && (
           <ErrorMessage>
             <ul>
-              <span>A senha deve conter:</span>
-              <li>Pelo menos uma letra maiúscula</li>
-              <li>Pelo menos uma letra minúscula</li>
-              <li>Pelo menos um número</li>
+              <span>The password must contain:</span>
+              <li>At least one capital letter</li>
+              <li>At least one lowercase letter</li>
+              <li>At least one number</li>
             </ul>
           </ErrorMessage>
         )}
         {errors.password?.type === "minLength" && (
           <ErrorMessage>Senha deve ter no mínimo 8 caracteres</ErrorMessage>
         )}
-        <button type="submit">Submit</button>
+        <button type="submit">Sign Up</button>
         <CreateAccount>
-          Don&apos;t have an account? <Link to="/register">Register</Link>
+          Already have an account? <Link to="/login">Login</Link>
         </CreateAccount>
       </Form>
     </Container>
