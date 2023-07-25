@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Container, Form, CreateAccount, ErrorMessage } from "./styled";
 import { useForm } from "react-hook-form";
+import { useEffect } from "react";
 
 export function Register() {
   const {
@@ -8,6 +9,9 @@ export function Register() {
     handleSubmit,
     formState: { errors },
   } = useForm();
+
+  useEffect(() => setFocus("name"), [setFocus]);
+
   return (
     <Container>
       <div>

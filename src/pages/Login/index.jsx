@@ -11,9 +11,7 @@ export function Login() {
     formState: { errors },
   } = useForm();
 
-  useEffect(() => {
-    setFocus("name");
-  }, [setFocus]);
+  useEffect(() => setFocus("email"), [setFocus]);
 
   return (
     <Container>
