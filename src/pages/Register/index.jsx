@@ -1,8 +1,8 @@
-import { Link } from "react-router-dom";
-import { Container, Form, CreateAccount, ErrorMessage } from "./styled";
-import { useForm } from "react-hook-form";
 import { useEffect } from "react";
+import { useHistory, Link } from "react-router-dom";
+import { useForm } from "react-hook-form";
 import { registerUser } from "../../services/api";
+import { Container, Form, CreateAccount, ErrorMessage } from "./styled";
 
 export function Register() {
   const {
@@ -11,6 +11,7 @@ export function Register() {
     setFocus,
     formState: { errors },
   } = useForm();
+  const history = useHistory();
 
   useEffect(() => setFocus("name"), [setFocus]);
 
@@ -18,8 +19,9 @@ export function Register() {
     try {
       const userData = await registerUser(data);
       console.log(userData);
+      history.push("/codeConfirmation");
     } catch (error) {
-      console.error(error);
+      throw new Error(`Falha ao registrar o usuário: ${error}`);
     }
   };
 

@@ -10,11 +10,12 @@ export function CodeConfirmation() {
     formState: { errors },
   } = useForm();
 
-  useEffect(() => setFocus("code"));
+  useEffect(() => setFocus("code"), [setFocus]);
 
   const onSubmit = (data) => {
     console.log(data);
   };
+
   return (
     <Container>
       <Form onSubmit={handleSubmit(onSubmit)}>
