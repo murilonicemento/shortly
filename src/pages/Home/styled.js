@@ -33,14 +33,24 @@ export const MainSection = styled.section`
       color: ${colors.text};
     }
 
-    button {
+    a {
       width: 150px;
       height: 50px;
+      display: grid;
+      place-items: center;
       margin-top: 30px;
       background-color: ${colors.button};
       font-weight: 600;
-      border-radius: 30px;
+      text-decoration: none;
+      color: #fff;
       cursor: pointer;
+      border-radius: 30px;
+      transition: background-color .4s ease;
+
+      &:hover {
+        background-color: ${colors.buttonHover};
+        transition: background-color .4s ease;
+      }
     }
   }
 
@@ -82,13 +92,23 @@ export const BoostSection = styled.section`
     color: #fff;
   }
 
-  button {
+  a {
     width: 150px;
     height: 50px;
+    display: grid;
+    place-items: center;
     background-color: ${colors.button};
     font-weight: 600;
-    border-radius: 30px;
+    text-decoration: none;
+    color: #fff;
     cursor: pointer;
+    border-radius: 30px;
+    transition: background-color .4s ease;
+
+    &:hover {
+      background-color: ${colors.buttonHover};
+      transition: background-color .4s ease;
+    }
   }
 
   @media (min-width: 800px) {

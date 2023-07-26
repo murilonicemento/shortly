@@ -89,7 +89,7 @@ export const Form = styled.form`
     background-color: ${colors.button};
     font-size: 18px;
     font-weight: 600;
-    border-radius: 8px;
+    border-radius: 4px;
     cursor: pointer;
   }
 `;

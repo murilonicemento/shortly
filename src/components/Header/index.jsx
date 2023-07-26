@@ -7,6 +7,7 @@ import {
   Sidebar,
 } from "./styled";
 import logo from "../../assets/images/logo.svg";
+import { Link } from "react-router-dom";
 
 export function Header() {
   const [activeSidebar, setActiveSidebar] = useState(false);
@@ -25,8 +26,8 @@ export function Header() {
           <li>Resources</li>
         </NavigationBar>
         <Authentication>
-          <button>Login</button>
-          <button>Sign Up</button>
+          <Link to="/login">Login</Link>
+          <Link to="/register">Sign Up</Link>
         </Authentication>
         <Bars onClick={showSidebar}>
           <div></div>
@@ -46,10 +47,10 @@ export function Header() {
         </li>
         <hr />
         <li>
-          <a href="">Login</a>
+          <Link to="/login">Login</Link>
         </li>
         <li>
-          <a href="">Sign Up</a>
+          <Link to="/register">Sign Up</Link>
         </li>
       </Sidebar>
     </MyHeader>

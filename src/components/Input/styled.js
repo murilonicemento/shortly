@@ -150,4 +150,10 @@ export const Button = styled.button`
   color: #fff;
   border-radius: 4px;
   cursor: pointer;
+  transition: background-color .4s ease;
+
+  &:hover {
+    background-color: ${colors.buttonHover};
+    transition: background-color .4s ease;
+  }
 `;

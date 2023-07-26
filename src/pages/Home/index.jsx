@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Header } from "../../components/Header";
 import { Input } from "../../components/Input";
 import { Footer } from "../../components/Footer";
@@ -18,14 +19,14 @@ export function Home() {
               Build your brand&apos;s recognition and get detailed insights on
               how your links are performing.
             </p>
-            <button>Get Started</button>
+            <Link to="/register">Get Started</Link>
           </div>
         </MainSection>
         <Input />
         <Statistics />
         <BoostSection>
           <h2>Boost your links today</h2>
-          <button>Get Started</button>
+          <Link to="/register">Get Started</Link>
         </BoostSection>
         <Footer />
       </main>

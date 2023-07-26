@@ -2,15 +2,26 @@ import { Link } from "react-router-dom";
 import { Container, Form, CreateAccount, ErrorMessage } from "./styled";
 import { useForm } from "react-hook-form";
 import { useEffect } from "react";
+import { registerUser } from "../../services/api";
 
 export function Register() {
   const {
     register,
     handleSubmit,
+    setFocus,
     formState: { errors },
   } = useForm();
 
   useEffect(() => setFocus("name"), [setFocus]);
+
+  const onSubmit = async (data) => {
+    try {
+      const userData = await registerUser(data);
+      console.log(userData);
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   return (
     <Container>
@@ -21,7 +32,7 @@ export function Register() {
           links.
         </p>
       </div>
-      <Form onSubmit={handleSubmit()}>
+      <Form onSubmit={handleSubmit(onSubmit)}>
         <h1>Create Account</h1>
         <input
           {...register("name", { required: true })}

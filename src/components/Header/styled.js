@@ -49,22 +49,32 @@ export const NavigationBar = styled.ul`
 export const Authentication = styled.div`
   display: none;
 
-  button {
+  a {
     width: 100px;
     height: 35px;
-    font-weight: bold;
-    cursor: pointer;
     font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
   }
 
-  button:not(:last-child) {
+  a:not(:last-child) {
     background-color: #fff;
     color: ${colors.text};
   }
 
-  button:not(:first-child) {
+  a:not(:first-child) {
     background-color: ${colors.button};
     border-radius: 20px;
+    color: #fff;
+    transition: background-color .4s ease;
+
+      &:hover {
+        background-color: ${colors.buttonHover};
+        transition: background-color .4s ease;
+      }
   }
 
   @media (min-width: 800px) {
