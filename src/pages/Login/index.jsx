@@ -1,8 +1,9 @@
-import { Link } from "react-router-dom";
-import { Container, Form, CreateAccount, ErrorMessage } from "./styled";
+import { useContext, useEffect } from "react";
+import { useNavigate, Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import { useEffect } from "react";
-import { login } from "../../services/api";
+import { AuthContext } from "../../contexts/Auth/AuthContext";
+// import { login } from "../../services/api";
+import { Container, Form, CreateAccount, ErrorMessage } from "./styled";
 
 export function Login() {
   const {
@@ -11,16 +12,25 @@ export function Login() {
     setFocus,
     formState: { errors },
   } = useForm();
+  const auth = useContext(AuthContext);
+  const navigate = useNavigate();
 
   useEffect(() => setFocus("email"), [setFocus]);
 
   const onSubmit = async (data) => {
-    try {
-      const userData = await login(data);
-      console.log(userData);
-    } catch (error) {
-      console.error(error);
+    const isLogged = await auth.login(data.email, data.password);
+    if (isLogged) {
+      navigate("/private");
+    } else {
+      console.log("Login failed!");
     }
+
+    // try {
+    //   const userData = await login(data);
+    //   console.log(userData);
+    // } catch (error) {
+    //   console.error(error);
+    // }
   };
 
   return (

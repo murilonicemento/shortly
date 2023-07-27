@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import {
   MyHeader,
   NavigationBar,
@@ -7,7 +8,6 @@ import {
   Sidebar,
 } from "./styled";
 import logo from "../../assets/images/logo.svg";
-import { Link } from "react-router-dom";
 
 export function Header() {
   const [activeSidebar, setActiveSidebar] = useState(false);
