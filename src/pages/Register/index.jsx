@@ -19,7 +19,7 @@ export function Register() {
     try {
       const userData = await registerUser(data);
       console.log(userData);
-      navigate.push("/codeConfirmation");
+      navigate("/codeConfirmation");
     } catch (error) {
       throw new Error(`Falha ao registrar o usuário: ${error}`);
     }
