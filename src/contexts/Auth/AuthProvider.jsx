@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { AuthContext } from "./AuthContext";
 import { useApi } from "../../hooks/useApi";
+import { PropTypes } from "prop-types";
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
@@ -54,4 +55,8 @@ export const AuthProvider = ({ children }) => {
       {children}
     </AuthContext.Provider>
   );
+};
+
+AuthProvider.propTypes = {
+  children: PropTypes.node.isRequired,
 };
