@@ -10,6 +10,7 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     const validateToken = async () => {
       const storageData = localStorage.getItem("authToken");
+      console.log(storageData);
       if (storageData) {
         const data = await api.validateToken(storageData);
         if (data.user) {
@@ -18,13 +19,13 @@ export const AuthProvider = ({ children }) => {
       }
     };
     validateToken();
-  }, [api]);
+  }, []);
 
   const login = async (email, password) => {
     const data = await api.login(email, password);
     if (data.user && data.token) {
       setUser(data.user);
-      setToken(data.token);
+      setToken(data.token.access);
       return true;
     }
     return false;

@@ -19,11 +19,11 @@ export function Login() {
 
   const onSubmit = async (data) => {
     const isLogged = await auth.login(data.email, data.password);
+
     if (isLogged) {
-      navigate("/private");
-    } else {
-      console.log("Login failed!");
+      return navigate("/");
     }
+    console.log("Login failed!");
 
     // try {
     //   const userData = await login(data);
