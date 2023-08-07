@@ -1,9 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Home } from "./pages/Home";
 import { Login } from "./pages/Login";
 import { Register } from "./pages/Register";
 import { CodeConfirmation } from "./pages/CodeConfirmation";
-import { Private } from "./pages/Private";
+import { Home } from "./pages/Home";
 import { NotFound } from "./pages/NotFound";
 import { AuthProvider } from "./contexts/Auth/AuthProvider";
 import { RequireAuth } from "./contexts/Auth/RequireAuth";
@@ -16,18 +15,17 @@ function App() {
       <AuthProvider>
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
-            <Route path="/codeConfirmation" element={<CodeConfirmation />} />
             <Route
-              path="/private"
+              path="/"
               element={
                 <RequireAuth>
-                  <Private />
+                  <Home />
                 </RequireAuth>
               }
             />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/codeConfirmation" element={<CodeConfirmation />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
