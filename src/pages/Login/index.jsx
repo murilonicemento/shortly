@@ -18,19 +18,14 @@ export function Login() {
   useEffect(() => setFocus("email"), [setFocus]);
 
   const onSubmit = async (data) => {
-    const isLogged = await auth.login(data.email, data.password);
-
-    if (isLogged) {
-      return navigate("/");
+    try {
+      const isLogged = await auth.login(data.email, data.password);
+      if (isLogged) {
+        return navigate("/");
+      }
+    } catch (error) {
+      console.error(error);
     }
-    console.log("Login failed!");
-
-    // try {
-    //   const userData = await login(data);
-    //   console.log(userData);
-    // } catch (error) {
-    //   console.error(error);
-    // }
   };
 
   return (
