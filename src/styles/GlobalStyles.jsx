@@ -12,20 +12,24 @@ export const GlobalStyles = createGlobalStyle`
     font-family: "Poppins", Arial, sans-serif;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     ::-webkit-scrollbar {
-            width: 10px;
-        }
+      width: 10px;
+    }
 
-        ::-webkit-scrollbar-track {
-            background: #fff;
-            border-radius: 30px;
-        }
+    ::-webkit-scrollbar-track {
+      background: #fff;
+      border-radius: 30px;
+    }
 
-        ::-webkit-scrollbar-thumb {
-            background: ${colors.button};
-            border-radius: 7px;
-        }
+    ::-webkit-scrollbar-thumb {
+      background: ${colors.button};
+      border-radius: 7px;
+    }    
   }
 
   input, button {
