@@ -1,20 +1,15 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import {
-  MyHeader,
-  NavigationBar,
-  Authentication,
-  Bars,
-  Sidebar,
-} from "./styled";
+import { MyHeader, NavigationBar, Authentication } from "./styled";
 import logo from "../../assets/images/logo.svg";
+import AvatarDemo from "../Avatar";
 
 export function Header() {
-  const [activeSidebar, setActiveSidebar] = useState(false);
+  // const [activeSidebar, setActiveSidebar] = useState(false);
 
-  function showSidebar() {
-    setActiveSidebar(!activeSidebar);
-  }
+  // function showSidebar() {
+  //   setActiveSidebar(!activeSidebar);
+  // }
+
+  console.log();
 
   return (
     <MyHeader>
@@ -26,16 +21,17 @@ export function Header() {
           <li>Resources</li>
         </NavigationBar>
         <Authentication>
-          <Link to="/login">Login</Link>
-          <Link to="/register">Sign Up</Link>
+          <AvatarDemo />
+          {/* <Link to="/login">Login</Link>
+          <Link to="/register">Sign Up</Link> */}
         </Authentication>
-        <Bars onClick={showSidebar}>
+        {/* <Bars onClick={showSidebar}>
           <div></div>
           <div></div>
           <div></div>
-        </Bars>
+        </Bars> */}
       </header>
-      <Sidebar active={activeSidebar}>
+      {/* <Sidebar active={activeSidebar}>
         <li>
           <a href="">Features</a>
         </li>
@@ -52,7 +48,7 @@ export function Header() {
         <li>
           <Link to="/register">Sign Up</Link>
         </li>
-      </Sidebar>
+      </Sidebar> */}
     </MyHeader>
   );
 }
