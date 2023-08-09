@@ -1,6 +1,6 @@
 import { MyHeader, NavigationBar, Authentication } from "./styled";
 import logo from "../../assets/images/logo.svg";
-import AvatarDemo from "../Avatar";
+import PopoverDemo from "../Popover";
 
 export function Header() {
   // const [activeSidebar, setActiveSidebar] = useState(false);
@@ -21,7 +21,7 @@ export function Header() {
           <li>Resources</li>
         </NavigationBar>
         <Authentication>
-          <AvatarDemo />
+          <PopoverDemo />
           {/* <Link to="/login">Login</Link>
           <Link to="/register">Sign Up</Link> */}
         </Authentication>
