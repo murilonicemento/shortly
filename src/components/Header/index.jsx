@@ -20,12 +20,12 @@ export function Header() {
           <li>Pricing</li>
           <li>Resources</li>
         </NavigationBar>
-        <Authentication>
-          <PopoverDemo />
-          {/* <Link to="/login">Login</Link>
-          <Link to="/register">Sign Up</Link> */}
+        <PopoverDemo />
+        {/* <Authentication>
+          <Link to="/login">Login</Link>
+          <Link to="/register">Sign Up</Link>
         </Authentication>
-        {/* <Bars onClick={showSidebar}>
+        <Bars onClick={showSidebar}>
           <div></div>
           <div></div>
           <div></div>
