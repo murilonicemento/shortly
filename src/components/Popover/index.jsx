@@ -5,6 +5,7 @@ import { violet, mauve, blackA } from "@radix-ui/colors";
 import { Cross2Icon } from "@radix-ui/react-icons";
 import { AuthContext } from "../../contexts/Auth/AuthContext";
 import user from "../../assets/images/user.svg";
+import DialogDemo from "../Dialog";
 
 const PopoverDemo = () => {
   const auth = useContext(AuthContext);
@@ -13,16 +14,18 @@ const PopoverDemo = () => {
     <Popover.Root>
       <Popover.Trigger asChild style={{ width: "45px", height: "45px" }}>
         <IconButton aria-label="Update dimensions">
-          <img
-            src={user}
-            alt="User Icon"
-            style={{ width: "30px", height: "30px" }}
-          />
+          <Image src={user} alt="User Icon" />
         </IconButton>
       </Popover.Trigger>
       <Popover.Portal>
         <PopoverContent sideOffset={5}>
           <Flex css={{ flexDirection: "column", gap: 10 }}>
+            <Fieldset>
+              <Text>
+                <DialogDemo />
+              </Text>
+            </Fieldset>
+            <Divider></Divider>
             <Fieldset>
               <Text
                 css={{ cursor: "pointer" }}
@@ -131,12 +134,22 @@ const Fieldset = styled("fieldset", {
   alignItems: "center",
 });
 
+const Image = styled("img", {
+  width: "30px",
+  height: "30px",
+});
+
+const Divider = styled("div", {
+  borderBottom: `1px solid ${violet.violet11}`,
+});
+
 const Text = styled("p", {
   margin: 0,
   color: mauve.mauve12,
   fontSize: 15,
   lineHeight: "19px",
   fontWeight: 500,
+  cursor: "pointer",
 });
 
 export default PopoverDemo;
