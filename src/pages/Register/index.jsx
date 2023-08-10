@@ -16,13 +16,15 @@ export function Register() {
   useEffect(() => setFocus("name"), [setFocus]);
 
   const onSubmit = async (data) => {
-    try {
-      const userData = await registerUser(data);
-      console.log(userData);
-      navigate("/codeConfirmation");
-    } catch (error) {
-      throw new Error(`Falha ao registrar o usuário: ${error}`);
-    }
+    // try {
+    //   const userData = await registerUser(data);
+    //   console.log(userData);
+    //   navigate("/codeConfirmation");
+    // } catch (error) {
+    //   throw new Error(`Falha ao registrar o usuário: ${error}`);
+    // }
+
+    navigate("/codeConfirmation");
   };
 
   return (
