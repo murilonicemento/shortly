@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { Container, Form, ErrorMessage, ForwardCode } from "./styled";
 
@@ -9,11 +10,12 @@ export function CodeConfirmation() {
     handleSubmit,
     formState: { errors },
   } = useForm();
+  const navigate = useNavigate();
 
   useEffect(() => setFocus("code"), [setFocus]);
 
   const onSubmit = (data) => {
-    console.log(data);
+    navigate("/login");
   };
 
   return (
