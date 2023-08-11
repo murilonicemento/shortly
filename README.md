@@ -13,13 +13,13 @@ Para executar o projeto, siga as instruções abaixo:
 1. Clone o repositório:
 
 ```bash
-git clone https://github.com/murilonicemento/url-shortening.git
+git clone https://github.com/murilonicemento/shortly.git
 ```
 
 2. Instale as dependências:
 
 ```bash
-cd url-shortening
+cd shortly
 npm install
 ```
 
@@ -40,7 +40,7 @@ Se você deseja contribuir para o projeto, siga as instruções abaixo:
 2. Clone o repositório forkado:
 
 ```bash
-git clone https://github.com/murilonicemento/url-shortening.git
+git clone https://github.com/murilonicemento/shortly.git
 ```
 
 3. Crie uma branch para a sua contribuição:
