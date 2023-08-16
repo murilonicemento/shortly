@@ -13,40 +13,28 @@ export const useApi = () => ({
       }
     }
 
-    // try {
     //   const response = await api.post("/validate", { token });
     //   return response.data;
-    // } catch (error) {
-    //   Alert("Error validating access token!");
-    // }
   },
   login: async (email, password) => {
-    return {
-      user: {
-        name: "Murilo",
-        email: "teste@email.com"
-      },
-      token: {
-        access: "aBcDeFgHiJkLmNoPqRsTuVwXyZ1234567890",
-        refresh: "1a2b3c4d5e6f7g8h9i0jAaBbCcDdEeFfGgHh"
-      }
-    }
-
-    // try {
-    //   const response = await api.post("/login", { email, password });
-    //   return response.data;
-    // } catch (error) {
-    //   Alert("Error when logging in!");
+    // return {
+    //   user: {
+    //     name: "Murilo",
+    //     email: "teste@email.com"
+    //   },
+    //   token: {
+    //     access: "aBcDeFgHiJkLmNoPqRsTuVwXyZ1234567890",
+    //     refresh: "1a2b3c4d5e6f7g8h9i0jAaBbCcDdEeFfGgHh"
+    //   }
     // }
+
+    const response = await api.post("/login", { email, password });
+    return response.data;
   },
   signOut: async () => {
     return { status: true };
 
-    // try {
     //   const response = await api.post("/logout");
     //   return response.data; 
-    // } catch (error) {
-    //   Alert("Error when logging out!");
-    // }
   }
 })

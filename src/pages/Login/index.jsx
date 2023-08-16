@@ -18,13 +18,9 @@ export function Login() {
   useEffect(() => setFocus("email"), [setFocus]);
 
   const onSubmit = async (data) => {
-    try {
-      const isLogged = await auth.login(data.email, data.password);
-      if (isLogged) {
-        return navigate("/");
-      }
-    } catch (error) {
-      console.error(error);
+    const isLogged = await auth.login(data.email, data.password);
+    if (isLogged) {
+      return navigate("/");
     }
   };
 
