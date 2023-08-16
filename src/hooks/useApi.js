@@ -12,8 +12,13 @@ export const useApi = () => ({
         email: "teste@email.com"
       }
     }
-    // const response = await api.post("/validate", { token });
-    // return response.data;
+
+    // try {
+    //   const response = await api.post("/validate", { token });
+    //   return response.data;
+    // } catch (error) {
+    //   Alert("Error validating access token!");
+    // }
   },
   login: async (email, password) => {
     return {
@@ -26,12 +31,22 @@ export const useApi = () => ({
         refresh: "1a2b3c4d5e6f7g8h9i0jAaBbCcDdEeFfGgHh"
       }
     }
-    // const response = await api.post("/login", { email, password });
-    // return response.data;
+
+    // try {
+    //   const response = await api.post("/login", { email, password });
+    //   return response.data;
+    // } catch (error) {
+    //   Alert("Error when logging in!");
+    // }
   },
   signOut: async () => {
-    return { status: true }
-    // const response = await api.post("/logout");
-    // return response.data;
+    return { status: true };
+
+    // try {
+    //   const response = await api.post("/logout");
+    //   return response.data; 
+    // } catch (error) {
+    //   Alert("Error when logging out!");
+    // }
   }
 })
